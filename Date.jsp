@@ -1,15 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page import="java.util.*" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Guru current Date</title>
-</head>
-<body>
-Today's date: <%= (new java.util.Date()).toLocaleString()%>
-Today's date: <%= (new java.util.Date()).toLocaleString()%>
-
-</body>
-</html>
+<HTML>     
+<HEAD>     
+<TITLE>Form Example</TITLE>     
+</HEAD>     
+<BODY BGCOLOR="#ffffcc">     
+<% if (request.getParameter("name")==
+null && request.getParameter("email")
+ == null) { %>     
+<CENTER>     
+<H2>User Info Request Form</H2>     
+<FORM METHOD="GET" ACTION="/developer/technicalArticles/xml/WebAppDev/process.jsp">     
+<P>     
+Your name: <input type="text" name=
+"name" size=26>     
+<P>     
+Your email: <input type="text" name=
+"email" size=26>     
+<P>     
+<input type="submit" value="Process">     
+</FORM>     
+</CENTER>     
+<% } else { %>     
+<%! String name, email; %>     
+<%     
+name = request.getParameter("name");     
+email = request.getParameter("email");     
+%>     
+<P>     
+<B>You have provided the following 
+info</B>:     
+<P>     
+<B>Name</B>: <%= name %><P>     
+<B>Email</B>: <%= email %>     
+<% } %>     
+</BODY>     
+</HTML>
