@@ -1,36 +1,38 @@
-<HTML>     
-<HEAD>     
-<TITLE>Form Example</TITLE>     
-</HEAD>     
-<BODY BGCOLOR="#ffffcc">     
-<% if (request.getParameter("name")==
-null && request.getParameter("email")
- == null) { %>     
-<CENTER>     
-<H2>User Info Request Form</H2>     
-<FORM METHOD="GET" ACTION="/developer/technicalArticles/xml/WebAppDev/process.jsp">     
-<P>     
-Your name: <input type="text" name=
-"name" size=26>     
-<P>     
-Your email: <input type="text" name=
-"email" size=26>     
-<P>     
-<input type="submit" value="Process">     
-</FORM>     
-</CENTER>     
-<% } else { %>     
-<%! String name, email; %>     
-<%     
-name = request.getParameter("name");     
-email = request.getParameter("email");     
-%>     
-<P>     
-<B>You have provided the following 
-info</B>:     
-<P>     
-<B>Name</B>: <%= name %><P>     
-<B>Email</B>: <%= email %>     
-<% } %>     
-</BODY>     
-</HTML>
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8" %>
+<!DOCTYPE HTML >
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Echoing HTML Request Parameters</title>
+</head>
+     
+<body>
+  <h2>Choose authors:</h2>
+  <form method="get">
+    <input type="checkbox" name="author" value="Tan Ah Teck">Tan
+    <input type="checkbox" name="author" value="Mohd Ali">Ali
+    <input type="checkbox" name="author" value="Kumar">Kumar
+    <input type="checkbox" name="author" value="Peter Johnson">Peter
+    <input type="submit" value="Query">
+  </form>
+  
+  <% 
+  String[] authors = request.getParameterValues("author");
+  if (authors != null) {
+  %>
+    <h3>You have selected author(s):</h3>
+    <ul>
+      <%
+      for (String author : authors) { 
+      %>
+        <li><%= author %></li>
+      <%
+      }
+      %>
+    </ul>
+  <%
+  }
+  %>
+  <br /><a href="<%= request.getRequestURI() %>">BACK</a> 
+<body>
+</html>
