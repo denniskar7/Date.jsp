@@ -7,7 +7,7 @@
 </head>
      
 <body>
-  <h2>Choose authors:</h2>
+  <h2>Choose STUDENT:</h2>
   <form method="get">
     <input type="checkbox" name="author" value="DENIS KARPUNOV">DENIS
     <input type="checkbox" name="author" value="HILA MATOK">HILA
