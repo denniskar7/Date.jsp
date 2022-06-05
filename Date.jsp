@@ -8,10 +8,11 @@
      
 <body>
   Today's date: <%= (new java.util.Date()).toLocaleString()%>
-  <h2>Choose STUDENT:</h2>
+  
+  <h2>Choose name of Student from our team:</h2>
   <form method="get">
-    <input type="checkbox" name="author" value="DENIS KARPUNOV">DENIS
-    <input type="checkbox" name="author" value="HILA MATOK">HILA
+    <input type="checkbox" name="author" value="DENIS KARPUNOV ">DENIS
+    <input type="checkbox" name="author" value="HILA MATOK ">HILA
     <input type="checkbox" name="author" value="TOMER COHEN">TOMER
     <input type="submit" value="Query">
   </form>
@@ -20,7 +21,7 @@
   String[] authors = request.getParameterValues("author");
   if (authors != null) {
   %>
-    <h3>You have selected author(s):</h3>
+    <h3>You have selected student(s):</h3>
     <ul>
       <%
       for (String author : authors) { 
