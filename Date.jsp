@@ -13,6 +13,7 @@
     <input type="checkbox" name="author" value="DENIS KARPUNOV">DENIS
     <input type="checkbox" name="author" value="HILA MATOK">HILA
     <input type="checkbox" name="author" value="TOMER COHEN">TOMER
+    <input type="checkbox" name="author" value="TOMER COHEN">new
     <input type="submit" value="Query">
   </form>
   
