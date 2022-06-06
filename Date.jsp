@@ -7,6 +7,7 @@
 </head>
      
 <body>
+  Today's date: <%= (new java.util.Date()).toLocaleString()%>
   <h2>Choose STUDENT:</h2>
   <form method="get">
     <input type="checkbox" name="author" value="DENIS KARPUNOV">DENIS
