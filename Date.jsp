@@ -14,6 +14,7 @@
     <input type="checkbox" name="author" value="HILA MATOK">HILA
     <input type="checkbox" name="author" value="TOMER COHEN">TOMER
     <input type="checkbox" name="author" value="TOMER COHEN">new
+    <input type="checkbox" name="author" value="ZIV COHEN">ZIV
     <input type="submit" value="Query">
   </form>
   
